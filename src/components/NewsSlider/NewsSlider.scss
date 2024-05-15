@@ -1,0 +1,40 @@
+.newsSlider {
+  background-color: var(--light-blue);
+  margin-bottom: 45px;
+  padding: 45px 0;
+
+  .sliderContainer {
+    width: 100%;
+    max-width: 1078px;
+    margin: 0 auto;
+  }
+
+  .newsImage {
+    height: 202px;
+  }
+}
+
+.slick-slide {
+  img {
+    display: inline;
+  }
+}
+
+@media (min-width: 1078px) {
+  .slick-slide {
+    margin: 0 40px;
+    width: 305px !important;
+  }
+  
+  .slick-list {
+    margin: 0 -40px;
+  }
+}
+
+@media (max-width: 1078px) {
+  .newsSlider {
+    padding: 30px 15px 60px;
+    margin-bottom: 30px;
+  }
+}
+

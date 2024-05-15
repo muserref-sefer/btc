@@ -1,0 +1,11 @@
+.newsList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -33px 100px -33px;
+}
+
+@media (max-width: 1078px) {
+  .newsList {
+    margin: 0;
+  }
+}

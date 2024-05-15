@@ -1,0 +1,36 @@
+.newsListContainer {
+  max-width: 1078px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.newsListHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .headerTitle {
+    margin: 0;
+    display: inline;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .newsBtn {
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid var(--mid-blue);
+    background-color: var(--dark-blue);
+  } 
+}
+
+
+@media (max-width: 1078px) {
+  .newsListHeader {
+    padding: 0 15px;
+  }
+}

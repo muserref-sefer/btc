@@ -1,0 +1,35 @@
+.newsSourceList {
+  border-top: 1px solid var(--mid-blue);
+  padding: 30px 15px;
+  margin-top: 30px;
+}
+
+.newsSource {
+  padding: 15px 0;
+  text-decoration: none;
+  color: none;
+  display: block;
+  border-bottom: 1px dashed var(--mid-blue);
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--purple);
+    margin: 0;
+  }
+
+  .descriptionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .description {
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 10px;
+      color: var(--gray);
+      margin-right: 15px;
+    }
+  }
+
+}

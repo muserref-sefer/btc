@@ -1,0 +1,47 @@
+.filter {
+  margin-top: 30px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+
+  .badge {
+    border-radius: 15px;
+    padding: 15px;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .filterBtn {
+    text-transform: capitalize;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #fff;
+    color: var(--dark-blue);
+    width: 100%;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid var(--mid-blue);
+    text-align: left;
+    cursor: pointer;
+    min-width: 160px;
+
+    img {
+      margin-right: 5px;
+    }
+
+    &.active {
+      background-color: var(--dark-blue);
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .filter {
+    padding: 0 12px;
+  }
+}
