@@ -1,12 +1,32 @@
-# Getting Started with Create React App
+# BTCTurk News Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project contains a custom news platform developed for BTCTurk company. 
+
+## Features
+
+### 1. Homepage
+
+- **News Source List**: Users can filter and select news sources on the homepage based on categories.
+
+### 2. News Source Page
+
+- **Slider and List View**: News from the selected source can be viewed as a slider or list.
+  
+- **Data Refresh**: The page automatically refreshes data every minute.
+  
+- **Reading List Management**: Users can add or remove news to their reading lists.
+
+### 3. News Detail Page
+
+- **News Details**: Details such as the news title, content, and publication date are displayed.
+  
+- **Reading List Management**: Users can add or remove news to their reading lists.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -29,18 +49,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run prettier`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This project uses [Prettier](https://prettier.io/) for code formatting. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Third-Party Libraries`
+This project uses the following third-party libraries:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- moment: For date and time manipulation.
+- react-lazy-load-image-component: Lazy loading images for performance optimization.
+- react-slick: Carousel and slider component for React.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
