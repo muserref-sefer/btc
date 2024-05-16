@@ -1,43 +1,45 @@
-import { useContext, useEffect, useState } from "react";
-import { NewsContextType } from "../../@types/types";
-import Filter from "../../components/Filter/Filter";
-import NewsSourceList from "../../components/NewsSourceList/NewsSourceList";
-import { NewsContext } from "../../store/Context";
-import "./Home.scss";
+import { useContext, useEffect, useState } from 'react'
+import { NewsContextType } from '../../@types/types'
+import Filter from '../../components/Filter/Filter'
+import NewsSourceList from '../../components/NewsSourceList/NewsSourceList'
+import { NewsContext } from '../../store/Context'
+import './Home.scss'
 
 function Home() {
-  const { setNewsSources } = useContext(NewsContext) as NewsContextType;
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { setNewsSources } = useContext(NewsContext) as NewsContextType
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   const fetchNewSources = () => {
-    setLoading(true);
-    setError(null);
+    setLoading(true)
+    setError(null)
 
-    return fetch(`https://newsapi.org/v2/sources?language=en&apiKey=${process.env.REACT_APP_API_KEY}`)
-      .then((res) => {
+    return fetch(
+      `https://newsapi.org/v2/sources?language=en&apiKey=${process.env.REACT_APP_API_KEY}`
+    )
+      .then(res => {
         if (!res.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('Network response was not ok')
         }
-        return res.json();
+        return res.json()
       })
-      .then((data) => {
-        if(data.status === "ok") {
-          setNewsSources(data.sources);
-          setLoading(false);
+      .then(data => {
+        if (data.status === 'ok') {
+          setNewsSources(data.sources)
+          setLoading(false)
         }
       })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
-        console.error("Error fetching news:", error);
-      });
+      .catch(error => {
+        setError(error)
+        setLoading(false)
+        console.error('Error fetching news:', error)
+      })
   }
 
   useEffect(() => {
-    fetchNewSources();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    fetchNewSources()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="container" data-testid="home">

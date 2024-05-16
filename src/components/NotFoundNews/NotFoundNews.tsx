@@ -1,4 +1,4 @@
-import "./NotFoundNews.scss"
+import './NotFoundNews.scss'
 
 function NotFoundNews() {
   return (

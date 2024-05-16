@@ -1,15 +1,15 @@
-import { useContext } from "react";
-import { NewsContextType } from "../../@types/types";
-import { NewsContext } from "../../store/Context";
-import NewsItem from "../NewsItem/NewsItem";
-import "./NewsList.scss";
+import { useContext } from 'react'
+import { NewsContextType } from '../../@types/types'
+import { NewsContext } from '../../store/Context'
+import NewsItem from '../NewsItem/NewsItem'
+import './NewsList.scss'
 
 function NewsList() {
-  const { news } = useContext(NewsContext) as NewsContextType;
-  let newsExceptFirstThere = news.slice(3);
+  const { news } = useContext(NewsContext) as NewsContextType
+  let newsExceptFirstThere = news.slice(3)
 
   if (newsExceptFirstThere.length === 0) {
-    return <p className="message">There is no more news.</p>;
+    return <p className="message">There is no more news.</p>
   }
 
   return (

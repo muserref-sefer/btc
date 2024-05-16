@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import { NewsContext } from '../../store/Context';
-import NewsList from './NewsList';
+import { render, screen } from '@testing-library/react'
+import { NewsContext } from '../../store/Context'
+import NewsList from './NewsList'
 
 const mockNewsContextValue = {
   news: [],
@@ -8,8 +8,8 @@ const mockNewsContextValue = {
   setNews: jest.fn(),
   setNewsSources: jest.fn(),
   filteredNewsSources: [],
-  filterNewsSourcesByCategory: jest.fn(), 
-};
+  filterNewsSourcesByCategory: jest.fn()
+}
 
 describe('NewsList Component Tests', () => {
   test('renders "no more news" message when news list is empty', () => {
@@ -17,8 +17,8 @@ describe('NewsList Component Tests', () => {
       <NewsContext.Provider value={mockNewsContextValue}>
         <NewsList />
       </NewsContext.Provider>
-    );
+    )
 
-    expect(screen.getByText('There is no more news.')).toBeInTheDocument();
-  });
-});
+    expect(screen.getByText('There is no more news.')).toBeInTheDocument()
+  })
+})

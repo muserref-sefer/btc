@@ -1,3 +1,8 @@
+
+import { SyntheticEvent } from "react";
+const notFoundImage = "/assets/img-not-found.jpeg";
+const placeholderImage = "/assets/img-placeholder.jpeg";
+
 export function slugify(str: string) {
   if (str) {
     str = str.replace(/^\s+|\s+$/g, ''); 
@@ -8,4 +13,11 @@ export function slugify(str: string) {
   }
 
   return str;
+}
+
+export function onImageError (e: SyntheticEvent<HTMLImageElement, Event>) {
+  const imgElement = e.target as HTMLImageElement;
+  if (imgElement.src !== placeholderImage) {
+    imgElement.src = notFoundImage;
+  }
 }
