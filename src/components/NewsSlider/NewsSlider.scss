@@ -1,7 +1,7 @@
 .newsSlider {
   background-color: var(--light-blue);
   margin-bottom: 45px;
-  padding: 45px 0;
+  padding: 45px 0 55px 0;
 
   .sliderContainer {
     width: 100%;
@@ -20,6 +20,10 @@
   }
 }
 
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
 @media (min-width: 1078px) {
   .slick-slide {
     margin: 0 40px;
@@ -28,6 +32,7 @@
   
   .slick-list {
     margin: 0 -40px;
+    padding-bottom: 30px;
   }
 }
 
